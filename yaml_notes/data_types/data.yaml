@@ -1,0 +1,31 @@
+topic: About Solar System
+age: 4.6 # 4.6 billion years
+no_of_major_planets: 8
+planets:
+    - Mercury
+    - Venus
+    - Earth
+    - Mars
+    - Jupiter
+    - Saturn
+    - Uranus
+    - Neptune
+no_of_dwarf_planets: 5
+dwarf_planets:
+    - Ceres
+    - Pluto
+    - Haumea
+    - Makemake
+    - Eris
+you_are_on_earth: true
+moon_rotates_around_earth: yes # this is boolean in 1.1 and string in 1.2
+
+# more representations
+hex: 0x1234
+octal: 0o1234
+null_value_format1: null
+null_value_format2: ~
+null_value_format3:
+positive_infinity: .inf
+negative_infinity: -.inf
+not_a_number: .nan

@@ -1,0 +1,30 @@
+
+plain_string: This is a plain string
+single_quoted_string: 'This is a single-quoted string'
+double_quoted_string: "This is a double-quoted string"
+
+literal: |
+    This is a multi-line string.
+    Line breaks are preserved.
+
+literal_keep: |+
+    This is a literal block scalar.
+    Newlines are preserved.
+
+literal_strip: |-
+    This is a literal block scalar.
+    Newlines are preserved.
+
+folded: >
+    This is a multi-line string.
+    Line breaks are converted to spaces.
+
+folded_keep: >+
+    This is a folded block scalar.
+    Newlines are converted to spaces.
+
+folded_strip: >-
+    This is a folded block scalar.
+    Newlines are converted to spaces.
+
+escaped_string: "This is a string with a newline character\nand a tab character\t."
