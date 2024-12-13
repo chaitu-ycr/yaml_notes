@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="this project stores yaml notes" /><meta name="author" content="chaitu-ycr" /><link rel="canonical" href="https://chaitu-ycr.github.io/yaml_notes/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>yaml_notes</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Overview";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/yaml_notes/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> yaml_notes
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Overview</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#datatypes">Datatypes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#scalars">Scalars</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sequences">Sequences</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#lists">Lists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sets">Sets</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mappings">Mappings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-yaml-file-link">example yaml file 👉 link</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#strings">Strings</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#basic-strings">Basic Strings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#multi-line-strings">Multi-line Strings</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#literal-block-preserves-line-breaks">Literal Block (|): Preserves line breaks.</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#folded-block-converts-line-breaks-to-spaces">Folded Block (&gt;): Converts line breaks to spaces.</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#special-characters">Special Characters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#explicit-type-declaration">Explicit Type Declaration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-yaml-file-link_1">example yaml file 👉 link</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#date-and-time">Date and Time</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">yaml_notes</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Overview</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/chaitu-ycr/yaml_notes.git/blob/main/docs/index.md">Edit on chaitu-ycr/yaml_notes</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="yaml_notes">yaml_notes</h1>
+<p>YAML 👈 YAML Ain't Markup Language</p>
+<p>official YAML site <a href="https://yaml.org/">link</a></p>
+<p><a href="https://yaml.org/spec/">Official YAML specifications</a></p>
+<ul>
+<li>revision 1.2 <a href="https://yaml.org/spec/1.2/spec.html">link</a></li>
+<li>revision 1.1 <a href="https://yaml.org/spec/1.1/current.html">link</a></li>
+</ul>
+<p>continue reading 👉 <a href="https://chaitu-ycr.github.io/yaml_notes/">yaml_notes</a></p>
+<h2 id="datatypes">Datatypes</h2>
+<h3 id="scalars">Scalars</h3>
+<p>These are single values. Scalars represent the simplest form of data.</p>
+<pre><code class="language-YAML">scalars:
+    - string        # !!str
+    - integer       # !!int
+    - float         # !!float
+    - boolean       # !!bool
+    - date_time     # !!timestamp
+    - null_value    # !!null
+    - binary_value  # !!binary
+</code></pre>
+<h3 id="sequences">Sequences</h3>
+<p>These are ordered lists of items, similar to arrays or lists in other programming languages.</p>
+<h4 id="lists">Lists</h4>
+<p>A list in YAML is an ordered collection of items. Each item in a list starts with a hyphen (-) followed by a space.</p>
+<pre><code class="language-YAML">fruits:
+    - mango 🥭
+    - green apple 🍏
+    - banana 🍌
+
+# single line representation
+list_in_oneline: [🥭, 🍏, 🍌]
+</code></pre>
+<h4 id="sets">Sets</h4>
+<p>A set in YAML is an unordered collection of unique items. Sets are represented as mappings where each key is associated with a null value.</p>
+<pre><code class="language-YAML">colours: !!set
+    ? red 🔴
+    ? green 🟢
+    ? blue 🔵
+
+# single line representation
+set_in_oneline: !!set {🔴, 🟢, 🔵}
+</code></pre>
+<h3 id="mappings">Mappings</h3>
+<p>These are collections of key-value pairs, similar to dictionaries or hash maps. Keys and values are separated by a colon and a space.</p>
+<pre><code class="language-YAML">person:
+    name: chaitu-ycr
+    age: 30
+    is_professional: true
+
+# single line representation
+mappings_in_oneline: {name: chaitu-ycr, age: 30, is_professional: true}
+</code></pre>
+<h3 id="example-yaml-file-link">example yaml file 👉 <a href="yaml_notes/data_types/data.yaml">link</a></h3>
+<h2 id="strings">Strings</h2>
+<p>In YAML, strings are a fundamental data type used to represent text and character data. Here are some key points about YAML strings</p>
+<h3 id="basic-strings">Basic Strings</h3>
+<p>Strings can be written in plain style without quotes, or enclosed in single (') or double (") quotes</p>
+<pre><code class="language-YAML">plain_string: This is a plain string
+single_quoted_string: 'This is a single-quoted string'
+double_quoted_string: &quot;This is a double-quoted string&quot;
+</code></pre>
+<h3 id="multi-line-strings">Multi-line Strings</h3>
+<p>YAML supports multi-line strings using the | (literal block) or &gt; (folded block) indicators</p>
+<h4 id="literal-block-preserves-line-breaks">Literal Block (|): Preserves line breaks.</h4>
+<pre><code class="language-YAML">literal: |
+    This is a multi-line string.
+    Line breaks are preserved.
+
+literal_keep: |+
+    This is a literal block scalar.
+    Newlines are preserved.
+
+literal_strip: |-
+    This is a literal block scalar.
+    Newlines are preserved.
+</code></pre>
+<h4 id="folded-block-converts-line-breaks-to-spaces">Folded Block (&gt;): Converts line breaks to spaces.</h4>
+<pre><code class="language-YAML">folded: &gt;
+    This is a multi-line string.
+    Line breaks are converted to spaces.
+
+folded_keep: &gt;+
+    This is a folded block scalar.
+    Newlines are converted to spaces.
+
+folded_strip: &gt;-
+    This is a folded block scalar.
+    Newlines are converted to spaces.
+</code></pre>
+<h3 id="special-characters">Special Characters</h3>
+<p>Double-quoted strings allow the use of escape sequences for special characters</p>
+<pre><code class="language-YAML">escaped_string: &quot;This is a string with a newline character\nand a tab character\t.&quot;
+</code></pre>
+<h3 id="explicit-type-declaration">Explicit Type Declaration</h3>
+<p>You can explicitly declare a string type using the !!str tag</p>
+<pre><code class="language-YAML">explicit_string: !!str 2024-12-02
+# This ensures that the value is interpreted as a string, even if it looks like another data type (e.g., a date) 
+</code></pre>
+<h3 id="example-yaml-file-link_1">example yaml file 👉 <a href="">link</a></h3>
+<h2 id="date-and-time">Date and Time</h2>
+<pre><code class="language-YAML"># standard date format YYYY-MM-DD
+standard_date_format: 2024-12-01
+
+# full date time format YYYY-MM-DDTHH:MM:SSZ
+# T seperates date and time
+# Z indicates UTC time
+full_date_time_format: 2024-12-01T10:30:60Z
+
+# full date time format with timezone YYYY-MM-DDTHH:MM:SS+/-HH:MM
+# T seperates date and time
+# +/- timezone offset
+india_standard_time: 2024-12-01T10:30:60+05:30
+japan_standard_time: 2024-12-01T10:30:60+09:00
+# also possible to define time in below format
+central_european_time:  2024-12-01 10:30:60 +1
+</code></pre>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/chaitu-ycr/yaml_notes.git" class="fa fa-code-fork" style="color: #fcfcfc"> chaitu-ycr/yaml_notes</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2024-12-13 11:22:41.351728+00:00
+-->
