@@ -39,45 +39,27 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Overview</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#datatypes">Datatypes</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#scalars">Scalars</a>
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#sequences">Sequences</a>
+    <li class="toctree-l2"><a class="reference internal" href="#scalars">Scalars</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#lists">Lists</a>
+    <li class="toctree-l3"><a class="reference internal" href="#strings-str">Strings (!!str) 📜</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#sets">Sets</a>
+    <li class="toctree-l3"><a class="reference internal" href="#numbers-int-float">Numbers (!!int, !!float) 🔢</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#booleans-bool">Booleans (!!bool) ⚖️</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#null-null">Null (!!null) 🌀</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mappings">Mappings</a>
+    <li class="toctree-l2"><a class="reference internal" href="#sequences-lists">Sequences (Lists) 📋</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#example-yaml-file-link">example yaml file 👉 link</a>
+    <li class="toctree-l2"><a class="reference internal" href="#mappings-dictionaries">Mappings (Dictionaries) 📑</a>
     </li>
-        </ul>
+    <li class="toctree-l2"><a class="reference internal" href="#syntax-and-structure">Syntax and Structure 🧩</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#strings">Strings</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#basic-strings">Basic Strings</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#multi-line-strings">Multi-line Strings</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#literal-block-preserves-line-breaks">Literal Block (|): Preserves line breaks.</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#folded-block-converts-line-breaks-to-spaces">Folded Block (&gt;): Converts line breaks to spaces.</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#special-characters">Special Characters</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#explicit-type-declaration">Explicit Type Declaration</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#example-yaml-file-link_1">example yaml file 👉 link</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#date-and-time">Date and Time</a>
+    <li class="toctree-l2"><a class="reference internal" href="#more">More</a>
     </li>
     </ul>
                 </li>
@@ -107,122 +89,628 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="yaml_notes">yaml_notes</h1>
-<p>YAML 👈 YAML Ain't Markup Language</p>
-<p>official YAML site <a href="https://yaml.org/">link</a></p>
-<p><a href="https://yaml.org/spec/">Official YAML specifications</a></p>
+<h2 id="introduction">Introduction</h2>
+<p>YAML (YAML Ain't Markup Language) is a human-readable data serialization format that's commonly used for configuration files and data exchange between languages with different data structures.</p>
+<p>official YAML <a href="https://yaml.org/">site</a></p>
+<p>Official YAML <a href="https://yaml.org/spec/">specifications</a></p>
 <ul>
 <li>revision 1.2 <a href="https://yaml.org/spec/1.2/spec.html">link</a></li>
 <li>revision 1.1 <a href="https://yaml.org/spec/1.1/current.html">link</a></li>
 </ul>
 <p>continue reading 👉 <a href="https://chaitu-ycr.github.io/yaml_notes/">yaml_notes</a></p>
-<h2 id="datatypes">Datatypes</h2>
-<h3 id="scalars">Scalars</h3>
-<p>These are single values. Scalars represent the simplest form of data.</p>
-<pre><code class="language-YAML">scalars:
-    - string        # !!str
-    - integer       # !!int
-    - float         # !!float
-    - boolean       # !!bool
-    - date_time     # !!timestamp
-    - null_value    # !!null
-    - binary_value  # !!binary
-</code></pre>
-<h3 id="sequences">Sequences</h3>
-<p>These are ordered lists of items, similar to arrays or lists in other programming languages.</p>
-<h4 id="lists">Lists</h4>
-<p>A list in YAML is an ordered collection of items. Each item in a list starts with a hyphen (-) followed by a space.</p>
-<pre><code class="language-YAML">fruits:
-    - mango 🥭
-    - green apple 🍏
-    - banana 🍌
-
-# single line representation
-list_in_oneline: [🥭, 🍏, 🍌]
-</code></pre>
-<h4 id="sets">Sets</h4>
-<p>A set in YAML is an unordered collection of unique items. Sets are represented as mappings where each key is associated with a null value.</p>
-<pre><code class="language-YAML">colours: !!set
-    ? red 🔴
-    ? green 🟢
-    ? blue 🔵
-
-# single line representation
-set_in_oneline: !!set {🔴, 🟢, 🔵}
-</code></pre>
-<h3 id="mappings">Mappings</h3>
-<p>These are collections of key-value pairs, similar to dictionaries or hash maps. Keys and values are separated by a colon and a space.</p>
-<pre><code class="language-YAML">person:
+<p><em>NOTE</em></p>
+<ul>
+<li>YAML uses indentation to represent the structure of a document.</li>
+<li>Only spaces are allowed, tabs are not supported.</li>
+<li>Indentation levels define nested structures like lists and dictionaries.</li>
+</ul>
+<h2 id="scalars">Scalars</h2>
+<p>Scalars are single, indivisible values. They can be <code>strings</code>, <code>numbers</code>, <code>booleans</code>, or <code>null</code>.</p>
+<h3 id="strings-str">Strings (<code>!!str</code>) 📜</h3>
+<p>Strings in YAML are used to represent textual data. YAML allows you to format strings in various ways to handle simple and complex text scenarios.</p>
+<ul>
+<li>Plain Strings</li>
+</ul>
+<p>Plain strings are unquoted strings. They are the simplest and most commonly used.</p>
+<p><code>yaml
+  name: chaitu-ycr
+  description: This is a plain string</code></p>
+<ul>
+<li>Quoted Strings</li>
+</ul>
+<p>Use single quotes for strings that include special characters that should be taken literally.</p>
+<p><code>yaml
+  text: 'It''s a sunny day'  # Escapes single quote
+  emoji: '😀😃😄'</code></p>
+<p>Use double quotes for strings that include special characters or need to include escape sequences</p>
+<p><code>yaml
+  #
+  text: "Hello, \nWorld!"  # \n creates a newline
+  emoji: "😀😃😄"</code></p>
+<ul>
+<li>Multiline Strings 🖋️</li>
+</ul>
+<p>YAML supports multiline strings using block (<code>|</code>) and folded (<code>&gt;</code>) styles.</p>
+<p>```yaml
+  block_scalar: |
+    This is a block scalar.
+    It preserves line breaks.
+    Even empty lines are included.</p>
+<p>folded_scalar: &gt;
+    This is a folded scalar.
+    It folds new lines into spaces,
+    creating a single flowing paragraph.
+  ```</p>
+<ul>
+<li>Special Characters and Escaping 🔍</li>
+</ul>
+<p>Double-quoted strings can contain special characters and escape sequences.</p>
+<p>Use backslash (<code>\</code>) to introduce escape sequences.</p>
+<p><code>yaml
+  special_characters: "Newline: \n, Tab: \t, Backslash: \\, Quote: \""</code></p>
+<ul>
+<li>Null Strings 🌀</li>
+</ul>
+<p>Null values are represented as (<code>null</code>) or <code>(~)</code>.</p>
+<p><code>yaml
+  null_example1: null
+  null_example2: ~</code></p>
+<h3 id="numbers-int-float">Numbers (<code>!!int</code>, <code>!!float</code>) 🔢</h3>
+<p>YAML supports different types of numbers, including integers, floating-point numbers, and numbers in scientific notation.</p>
+<ul>
+<li>example</li>
+</ul>
+<p>```yaml
+  # An integer representing age
+  age: 30</p>
+<p># A negative integer representing temperature
+  temperature: -5</p>
+<p># A float representing height in feet
+  height: 5.9</p>
+<p># Speed of light in meters per second
+  speed_of_light: 3.0e8</p>
+<p># A hexadecimal color code
+  color_code: 0xFF5733</p>
+<p># File permission notation
+  file_permissions: 0755</p>
+<p># A binary number
+  binary_value: 0b101010
+  ```</p>
+<h3 id="booleans-bool">Booleans (<code>!!bool</code>) ⚖️</h3>
+<p>Booleans in YAML are used to represent true or false values. They are essential for controlling logic and conditions within your YAML files.</p>
+<ul>
+<li>True Values: <code>true</code>, <code>True</code>, <code>TRUE</code>, <code>yes</code>, <code>Yes</code>, <code>YES</code>, <code>on</code>, <code>On</code>, <code>ON</code></li>
+<li>False Values: <code>false</code>, <code>False</code>, <code>FALSE</code>, <code>no</code>, <code>No</code>, <code>NO</code>, <code>off</code>, <code>Off</code>, <code>OFF</code></li>
+</ul>
+<p>```yaml
+  # Standard Boolean Values
+  is_active: true  # Basic boolean
+  has_license: false  # Basic boolean</p>
+<p># Alternative Representations
+  is_enabled: yes  # Alternative for true
+  is_disabled: no  # Alternative for false</p>
+<p># Switch States
+  light_switch: on  # Alternative for true
+  dark_mode: off  # Alternative for false
+  ```</p>
+<h3 id="null-null">Null (<code>!!null</code>) 🌀</h3>
+<p>Null values in YAML represent the absence of a value. They are useful for indicating missing, undefined, or unassigned data.</p>
+<ul>
+<li>example</li>
+</ul>
+<p>```yaml
+  # Explicit (null)
+  preferred_language: null  # Language preference not set</p>
+<p># Tilde (~)
+  shipping_address: ~  # Shipping address is missing</p>
+<p># Empty Value: Just leave the value empty after the colon.
+  phone_number:  # Phone number not provided</p>
+<p># Empty Quotes: Using single or double quotes.
+  additional_info: ''  # No additional information
+  middle_name: ""
+  ```</p>
+<h2 id="sequences-lists">Sequences (Lists) 📋</h2>
+<p>YAML sequences (also known as lists) are ordered collections of values. They are used to represent data structures like arrays and lists in a simple and readable format.</p>
+<ul>
+<li>Basic List</li>
+</ul>
+<p>Sequences are defined using a dash (<code>-</code>) followed by a space for each item in the list.</p>
+<p><code>yaml
+  fruits:
+    - 🍎 Apple
+    - 🍌 Banana
+    - 🍒 Cherry</code></p>
+<ul>
+<li>Each item in the list starts with a <code>-</code></li>
+<li>
+<p>Items are indented for clarity (optional but recommended).</p>
+</li>
+<li>
+<p>Nested Lists</p>
+</li>
+</ul>
+<p>You can nest lists within lists to represent more complex data structures.</p>
+<p><code>yaml
+  favorites:
+    - colors:
+        - 🔴 Red
+        - 🟢 Green
+        - 🔵 Blue
+    - numbers:
+        - 1️⃣ One
+        - 2️⃣ Two
+        - 3️⃣ Three</code></p>
+<ul>
+<li>
+<p>The favorites key contains a list of nested lists (colors and numbers).</p>
+</li>
+<li>
+<p>Lists of Dictionaries</p>
+</li>
+</ul>
+<p>Lists can contain dictionaries (mappings), which is useful for representing structured data.</p>
+<p><code>yml
+  employees:
+    - name: chaitu-ycr
+      age: 30
+      department: 🛠️ Engineering
+    - name: ycr dummy
+      age: 25
+      department: 📈 Marketing</code></p>
+<ul>
+<li>
+<p>Each item in the employees list is a dictionary with name, age, and department keys.</p>
+</li>
+<li>
+<p>Mixed Lists</p>
+</li>
+</ul>
+<p>Lists can contain different types of items, such as strings, numbers, and booleans.</p>
+<p><code>yaml
+  mixed_list:
+    - "String" 📜
+    - 42 🔢
+    - true ⚖️
+    - null 🌀</code></p>
+<ul>
+<li>
+<p>The mixed_list contains a string, an integer, a boolean, and a null value.</p>
+</li>
+<li>
+<p>Lists with Multiline Strings</p>
+</li>
+</ul>
+<p>Lists can include multiline strings using block or folded scalars.</p>
+<p><code>yml
+  notes:
+    - &gt;
+      This is a folded string 📄
+      in a list item.
+    - |
+      This is a block string 🖋️
+      in a list item.</code></p>
+<ul>
+<li>The first item uses a folded scalar (<code>&gt;</code>).</li>
+<li>
+<p>The second item uses a block scalar (<code>|</code>).</p>
+</li>
+<li>
+<p>Combining Sequences and Mappings</p>
+</li>
+</ul>
+<p>You can combine sequences and mappings to create complex structures.</p>
+<p><code>yml
+  complex_structure:
+    - name: "Item 1" 📦
+      attributes:
+        - attribute1: value1
+        - attribute2: value2
+    - name: "Item 2" 📦
+      attributes:
+        - attribute1: value3
+        - attribute2: value4</code></p>
+<ul>
+<li>Each item in complex_structure is a dictionary with a nested list of dictionaries (attributes).</li>
+</ul>
+<h2 id="mappings-dictionaries">Mappings (Dictionaries) 📑</h2>
+<p>Mappings (also known as dictionaries or hash maps) in YAML are collections of key-value pairs. They are essential for representing structured data.</p>
+<ul>
+<li>Basic Mappings</li>
+</ul>
+<p>A basic mapping consists of key-value pairs separated by a colon and space.</p>
+<p><code>yaml
+  person:
     name: chaitu-ycr
     age: 30
-    is_professional: true
-
-# single line representation
-mappings_in_oneline: {name: chaitu-ycr, age: 30, is_professional: true}
-</code></pre>
-<h3 id="example-yaml-file-link">example yaml file 👉 <a href="yaml_notes/data_types/data.yaml">link</a></h3>
-<h2 id="strings">Strings</h2>
-<p>In YAML, strings are a fundamental data type used to represent text and character data. Here are some key points about YAML strings</p>
-<h3 id="basic-strings">Basic Strings</h3>
-<p>Strings can be written in plain style without quotes, or enclosed in single (') or double (") quotes</p>
-<pre><code class="language-YAML">plain_string: This is a plain string
-single_quoted_string: 'This is a single-quoted string'
-double_quoted_string: &quot;This is a double-quoted string&quot;
-</code></pre>
-<h3 id="multi-line-strings">Multi-line Strings</h3>
-<p>YAML supports multi-line strings using the | (literal block) or &gt; (folded block) indicators</p>
-<h4 id="literal-block-preserves-line-breaks">Literal Block (|): Preserves line breaks.</h4>
-<pre><code class="language-YAML">literal: |
-    This is a multi-line string.
-    Line breaks are preserved.
-
-literal_keep: |+
-    This is a literal block scalar.
-    Newlines are preserved.
-
-literal_strip: |-
-    This is a literal block scalar.
-    Newlines are preserved.
-</code></pre>
-<h4 id="folded-block-converts-line-breaks-to-spaces">Folded Block (&gt;): Converts line breaks to spaces.</h4>
-<pre><code class="language-YAML">folded: &gt;
-    This is a multi-line string.
-    Line breaks are converted to spaces.
-
-folded_keep: &gt;+
-    This is a folded block scalar.
-    Newlines are converted to spaces.
-
-folded_strip: &gt;-
-    This is a folded block scalar.
-    Newlines are converted to spaces.
-</code></pre>
-<h3 id="special-characters">Special Characters</h3>
-<p>Double-quoted strings allow the use of escape sequences for special characters</p>
-<pre><code class="language-YAML">escaped_string: &quot;This is a string with a newline character\nand a tab character\t.&quot;
-</code></pre>
-<h3 id="explicit-type-declaration">Explicit Type Declaration</h3>
-<p>You can explicitly declare a string type using the !!str tag</p>
-<pre><code class="language-YAML">explicit_string: !!str 2024-12-02
-# This ensures that the value is interpreted as a string, even if it looks like another data type (e.g., a date) 
-</code></pre>
-<h3 id="example-yaml-file-link_1">example yaml file 👉 <a href="">link</a></h3>
-<h2 id="date-and-time">Date and Time</h2>
-<pre><code class="language-YAML"># standard date format YYYY-MM-DD
-standard_date_format: 2024-12-01
-
-# full date time format YYYY-MM-DDTHH:MM:SSZ
-# T seperates date and time
-# Z indicates UTC time
-full_date_time_format: 2024-12-01T10:30:60Z
-
-# full date time format with timezone YYYY-MM-DDTHH:MM:SS+/-HH:MM
-# T seperates date and time
-# +/- timezone offset
-india_standard_time: 2024-12-01T10:30:60+05:30
-japan_standard_time: 2024-12-01T10:30:60+09:00
-# also possible to define time in below format
-central_european_time:  2024-12-01 10:30:60 +1
-</code></pre>
+    city: chennai 🏙️</code></p>
+<ul>
+<li>person is a key that maps to another mapping.</li>
+<li>
+<p>Inside the person mapping, there are keys (name, age, city) with their respective values.</p>
+</li>
+<li>
+<p>Nested Mappings</p>
+</li>
+</ul>
+<p>Mappings can contain other mappings, creating a nested structure.</p>
+<p><code>yaml
+  company:
+    name: ycr Corp
+    location:
+      city: chennai 🏙️
+      state: Tamil Nadu 🛕
+    employees:
+      - name: chaitu-ycr
+        role: Developer 👩‍💻
+      - name: ycr dummy
+        role: Designer 🎨</code></p>
+<ul>
+<li>company is a mapping with nested mappings for location and employees.</li>
+<li>
+<p>employees is a list of mappings, each representing an employee.</p>
+</li>
+<li>
+<p>Inline Mappings</p>
+</li>
+</ul>
+<p>For simple structures, mappings can be written in a single line using curly braces <code>{}</code>.</p>
+<p><code>yml
+  address: {street: 123 Main St, city: chennai, zip: 12345}</code></p>
+<ul>
+<li>
+<p>Inline mapping is a concise way to represent simple key-value pairs.</p>
+</li>
+<li>
+<p>Complex Keys</p>
+</li>
+</ul>
+<p>YAML allows the use of complex types, such as sequences or mappings, as keys. These are enclosed in <code>?</code> and <code>:</code>.</p>
+<p><code>yml
+  ? [first, second]
+  : "Tuple as a key"</code></p>
+<ul>
+<li>
+<p>The key [first, second] is a sequence used as a key for the value "Tuple as a key".</p>
+</li>
+<li>
+<p>Combining Mappings and Sequences</p>
+</li>
+</ul>
+<p>You can combine mappings and sequences to create complex data structures.</p>
+<p><code>yml
+  project:
+    name: Build Website
+    tasks:
+      - title: Design Layout 🎨
+        status: Completed ✅
+      - title: Implement Backend 🖥️
+        status: In Progress 🔄
+      - title: Test Functionality 🧪
+        status: Pending ⏳</code></p>
+<ul>
+<li>
+<p>tasks is a list of mappings, each representing a task with title and status.</p>
+</li>
+<li>
+<p>Anchors and Aliases</p>
+</li>
+</ul>
+<p>Anchors (<code>&amp;</code>) and aliases (<code>*</code>) allow you to reuse values within a YAML document.</p>
+<p>```yaml
+  defaults: &amp;defaults
+    country: INDIA in
+    currency: RUPEE 💵</p>
+<p>location1:
+    &lt;&lt;: *defaults
+    city: chennai 🏙️</p>
+<p>location2:
+    &lt;&lt;: *defaults
+    city: Pondicherry 🌴
+  ```</p>
+<ul>
+<li>defaults is an anchor that can be reused in other mappings using <code>&lt;&lt;:</code> and <code>*</code></li>
+</ul>
+<h2 id="syntax-and-structure">Syntax and Structure 🧩</h2>
+<p>YAML (YAML Ain't Markup Language) is designed to be a human-readable data serialization format. Its syntax and structure are simple, making it easy to write and read.</p>
+<ul>
+<li>Indentation and Whitespace 📏</li>
+</ul>
+<p>Spaces Only: YAML uses spaces for indentation, not tabs. Consistent indentation is crucial.</p>
+<p>Levels of Indentation: Indentation levels define the hierarchy and structure of the document.</p>
+<p><code>yml
+  key1: value1
+  key2:
+    nestedKey1: nestedValue1
+    nestedKey2: nestedValue2</code></p>
+<ul>
+<li>
+<p><code>key2</code> contains a nested mapping, which is indented.</p>
+</li>
+<li>
+<p>Comments 💬</p>
+</li>
+</ul>
+<p>Single-Line Comments: Start with <code>#</code>. Used to add notes or explanations.</p>
+<p><code>yml
+  # This is a comment
+  name: chaitu-ycr  # Inline comment</code></p>
+<ul>
+<li>Scalars 📜</li>
+<li>Basic Values: Strings, numbers, booleans, and nulls.</li>
+<li>Strings<ul>
+<li>Plain: <code>name: chaitu-ycr</code></li>
+<li>Single-quoted: <code>name: 'chaitu-ycr'</code></li>
+<li>Double-quoted: <code>name: "chaitu-ycr"</code></li>
+<li>Multiline</li>
+<li>Block Scalar (<code>|</code>): Preserves line breaks.</li>
+<li>Folded Scalar (<code>&gt;</code>): Folds line breaks into spaces.</li>
+<li>In YAML, <code>&gt;+</code>, <code>&gt;-</code>, <code>|+</code>, and <code>|-</code> are used to control the formatting and handling of multiline strings, which are known as block scalars.</li>
+</ul>
+</li>
+</ul>
+<p>```yml
+  block: |
+    This is a literal scalar.
+    Line breaks will be preserved.
+    Exactly as written.</p>
+<p>block_keep: |+
+    This is a literal scalar.
+    Line breaks will be preserved.
+    Exactly as written.</p>
+<p>block_strip: |-
+    This is a literal scalar.
+    Line breaks will be preserved.
+    Exactly as written.</p>
+<p>folded: &gt;
+    This is a folded scalar.
+    New lines will be folded into spaces
+    when rendered.</p>
+<p>folded_keep: &gt;+
+    This is a folded scalar.
+    New lines will be folded into spaces.</p>
+<p>folded_strip: &gt;-
+    This is a folded scalar.
+    New lines will be folded into spaces.
+  ```</p>
+<ul>
+<li>
+<p>Lists (Sequences) 📋</p>
+</li>
+<li>
+<p>Dash and Space: Use <code>-</code> followed by a space for each item.</p>
+</li>
+</ul>
+<p><code>yml
+  fruits:
+    - 🍎 Apple
+    - 🍌 Banana
+    - 🍒 Cherry</code></p>
+<ul>
+<li>Nested Lists: Lists can contain other lists or mappings.</li>
+</ul>
+<p><code>yml
+  favorites:
+    - colors:
+        - 🔴 Red
+        - 🟢 Green
+        - 🔵 Blue
+    - numbers:
+        - 1️⃣ One
+        - 2️⃣ Two
+        - 3️⃣ Three</code></p>
+<ul>
+<li>
+<p>Mappings (Dictionaries) 📑</p>
+</li>
+<li>
+<p>Key-Value Pairs: Separate keys and values with a colon and space.</p>
+</li>
+</ul>
+<p><code>yml
+  person:
+    name: chaitu-ycr
+    age: 30
+    city: chennai 🏙️</code></p>
+<ul>
+<li>Nested Mappings: Mappings can contain other mappings.</li>
+</ul>
+<p><code>yml
+  company:
+    name: ycr TechCorp
+    location:
+      city: chennai 🏙️
+      state: Tamil Nadu 🛕</code></p>
+<ul>
+<li>
+<p>Inline Collections 📖</p>
+</li>
+<li>
+<p>Inline Lists and Mappings: Use square brackets for lists and curly braces for mappings.</p>
+</li>
+</ul>
+<p><code>yml
+  inline_list: [🍎 Apple, 🍌 Banana, 🍒 Cherry]
+  inline_mapping: {name: chaitu-ycr, age: 30, city: chennai 🏙️}</code></p>
+<ul>
+<li>
+<p>Anchors and Aliases 🔗</p>
+</li>
+<li>
+<p>Reuse Values: Use anchors (<code>&amp;</code>) to define reusable content and aliases (<code>*</code>) to reference it.</p>
+</li>
+</ul>
+<p>```yml
+  defaults: &amp;defaults
+    country: INDIA in
+    currency: RUPEE 💵</p>
+<p>location1:
+    &lt;&lt;: *defaults
+    city: chennai 🏙️</p>
+<p>location2:
+    &lt;&lt;: *defaults
+      city: Pondicherry 🌴
+    ```</p>
+<ul>
+<li>
+<p><code>defaults</code> anchor is reused in <code>location1</code> and <code>location2</code> with <code>&lt;&lt;:</code> <code>*defaults</code>.</p>
+</li>
+<li>
+<p>Complex Keys 🧩</p>
+</li>
+<li>
+<p>Use Complex Types: Sequences or mappings can be used as keys by enclosing them in <code>?</code> and <code>:</code>.</p>
+</li>
+</ul>
+<p><code>yml
+  ? [first, second]
+  : "Tuple as a key"</code></p>
+<ul>
+<li>
+<p>Multi-Document Files 📂</p>
+</li>
+<li>
+<p>Separate Documents: Use <code>---</code> to separate multiple documents within a single YAML file.</p>
+</li>
+</ul>
+<p>```yml</p>
+<hr />
+<p>document1:
+    key1: value1</p>
+<hr />
+<p>document2:
+    key2: value2
+  ```</p>
+<h2 id="more">More</h2>
+<ul>
+<li>
+<p>Date and Time</p>
+</li>
+<li>
+<p>example</p>
+</li>
+</ul>
+<p>```YAML
+  # YAML allows you to represent dates in a standard format, typically following the ISO 8601 standard (YYYY-MM-DD).
+  birth_date: 1990-12-31</p>
+<p># Times can also be represented using the ISO 8601 standard (HH:MM:SS).
+  meeting_time: 14:30:00</p>
+<p># YAML supports full timestamps, combining date and time.
+  event_timestamp: 2023-04-06T14:30:00Z</p>
+<p># Including a time zone in the timestamp ensures clarity across different regions.
+  local_timestamp: 2023-04-06T14:30:00+05:30</p>
+<p># Specify a range of dates or times using a custom format.
+  date_range: "2023-04-01 to 2023-04-07"
+  time_range: "14:30:00 to 15:30:00"
+  ```</p>
+<ul>
+<li>Custom Data Types 🛠️</li>
+</ul>
+<p>You can define custom data types using tags.</p>
+<p><code>yml
+  !color
+  name: Blue
+  code: "#0000FF"</code></p>
+<ul>
+<li>
+<p>The <code>!color</code> tag is a custom type indicating that this mapping represents a color with a name and code.</p>
+</li>
+<li>
+<p>Python Program to Read a YAML File 🐍📄</p>
+</li>
+</ul>
+<p><code>cmd
+  pip install pyyaml</code></p>
+<ul>
+<li>Create a YAML file (example.yaml)</li>
+</ul>
+<p><code>yml
+  # example.yaml
+  name: chaitu-ycr
+  age: 30
+  address:
+    street: 123 Main St
+    city: chennai
+    zip: 12345
+  hobbies:
+    - Reading
+    - Hiking
+    - Coding</code></p>
+<ul>
+<li>Python Script to read the YAML file</li>
+</ul>
+<p>```python
+  import yaml</p>
+<p># Function to read a YAML file
+  def read_yaml(file_path):
+      with open(file_path, 'r') as file:
+          data = yaml.safe_load(file)
+      return data</p>
+<p># Path to the YAML file
+  yaml_file = 'example.yaml'</p>
+<p># Reading the YAML file
+  data = read_yaml(yaml_file)</p>
+<p># Printing the data
+  print(data)
+  ```</p>
+<ul>
+<li>python output</li>
+</ul>
+<p><code>python
+  {
+    'name': 'chaitu-ycr',
+    'age': 30,
+    'address': {
+        'street': '123 Main St',
+        'city': 'chennai',
+        'zip': 12345
+    },
+    'hobbies': ['Reading', 'Hiking', 'Coding']
+  }</code></p>
+<ul>
+<li>
+<p>Python Program to Create a YAML File 🐍📄</p>
+</li>
+<li>
+<p>Python Script to create and write to a YAML file</p>
+</li>
+</ul>
+<p>```python
+  import yaml</p>
+<p># Sample data to be written to the YAML file
+  data = {
+      'name': 'chaitu-ycr',
+      'age': 30,
+      'address': {
+          'street': '123 Main St',
+          'city': 'chennai',
+          'zip': 12345
+      },
+      'hobbies': ['Reading', 'Hiking', 'Coding']
+  }</p>
+<p># Function to write data to a YAML file
+  def write_yaml(file_path, data):
+      with open(file_path, 'w') as file:
+          yaml.dump(data, file, default_flow_style=False)</p>
+<p># Path to the YAML file
+  yaml_file = 'output.yaml'</p>
+<p># Writing the data to the YAML file
+  write_yaml(yaml_file, data)</p>
+<p>print(f"Data written to {yaml_file}")
+  ```</p>
+<ul>
+<li>The content of the output.yaml file will be</li>
+</ul>
+<p><code>yaml
+  name: chaitu-ycr
+  age: 30
+  address:
+    street: 123 Main St
+    city: chennai
+    zip: 12345
+  hobbies:
+  - Reading
+  - Hiking
+  - Coding</code></p>
               
             </div>
           </div><footer>
@@ -269,5 +757,5 @@ central_european_time:  2024-12-01 10:30:60 +1
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2024-12-13 11:22:41.351728+00:00
+Build Date UTC : 2024-12-14 18:09:43.208740+00:00
 -->
