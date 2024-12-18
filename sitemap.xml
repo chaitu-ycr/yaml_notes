@@ -2,6 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://chaitu-ycr.github.io/yaml_notes/</loc>
-         <lastmod>2024-12-14</lastmod>
+         <lastmod>2024-12-18</lastmod>
+    </url>
+    <url>
+         <loc>https://chaitu-ycr.github.io/yaml_notes/mappings/</loc>
+         <lastmod>2024-12-18</lastmod>
+    </url>
+    <url>
+         <loc>https://chaitu-ycr.github.io/yaml_notes/miscellaneous/</loc>
+         <lastmod>2024-12-18</lastmod>
+    </url>
+    <url>
+         <loc>https://chaitu-ycr.github.io/yaml_notes/scalars/</loc>
+         <lastmod>2024-12-18</lastmod>
+    </url>
+    <url>
+         <loc>https://chaitu-ycr.github.io/yaml_notes/sequences/</loc>
+         <lastmod>2024-12-18</lastmod>
+    </url>
+    <url>
+         <loc>https://chaitu-ycr.github.io/yaml_notes/syntax_and_structure/</loc>
+         <lastmod>2024-12-18</lastmod>
     </url>
 </urlset>
