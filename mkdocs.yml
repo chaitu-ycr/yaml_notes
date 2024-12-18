@@ -13,21 +13,15 @@ theme:
     - toc.integrate
 
 nav:
-  - Overview: index.md
+  - index.md
+  - scalars.ipynb
+  - sequences.ipynb
+  - mappings.ipynb
+  - syntax_and_structure.ipynb
+  - miscellaneous.ipynb
 
 plugins:
-  - mkdocstrings:
-      handlers:
-        python:
-          options:
-            docstring_style: google
-            show_source: false
-            merge_init_into_class: true
-            show_docstring_modules: false
-          setup_commands:
-            - import sys
-            - sys.path.append('./yaml_notes')
-          selection:
-            new_path_syntax: true
+  - mkdocs-jupyter:
+      include_requirejs: true
   - include-markdown:
       recursive: true

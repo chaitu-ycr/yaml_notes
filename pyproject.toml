@@ -8,6 +8,7 @@ readme = "README.md"
 homepage = "https://github.com/chaitu-ycr/yaml_notes.git"
 repository = "https://github.com/chaitu-ycr/yaml_notes.git"
 documentation = "https://chaitu-ycr.github.io/yaml_notes/"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -16,6 +17,7 @@ pyyaml = "^6.0.2"
 ruamel-yaml = "^0.18.6"
 mkdocstrings-python = "^1.12.2"
 mkdocs-include-markdown-plugin = "^7.1.2"
+mkdocs-jupyter = "^0.25.1"
 
 [build-system]
 requires = ["poetry-core"]
