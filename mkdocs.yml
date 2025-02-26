@@ -7,11 +7,6 @@ repo_name: chaitu-ycr/yaml_notes
 repo_url: https://github.com/chaitu-ycr/yaml_notes.git
 edit_uri: blob/main/docs/
 
-theme:
-  name: readthedocs
-  features:
-    - toc.integrate
-
 nav:
   - index.md
   - scalars.ipynb
@@ -25,3 +20,10 @@ plugins:
       include_requirejs: true
   - include-markdown:
       recursive: true
+  - search
+
+theme:
+  name: readthedocs
+  features:
+    - toc.integrate
+    - search

@@ -1,23 +1,29 @@
-[tool.poetry]
+[project]
 name = "yaml_notes"
 version = "0.0.1"
 description = "this project stores yaml notes"
-authors = ["chaitu-ycr"]
-license = "LICENSE"
+license = { text = "LICENSE" }
 readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "chaitu-ycr", email = "chaitu.ycr@gmail.com" }]
+keywords = ["yaml", "yml", "notes"]
+package-mode = false
+dynamic = [ "dependencies" ]
+
+[project.urls]
 homepage = "https://github.com/chaitu-ycr/yaml_notes.git"
 repository = "https://github.com/chaitu-ycr/yaml_notes.git"
 documentation = "https://chaitu-ycr.github.io/yaml_notes/"
-package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.9"
-ipykernel = "^6.29.5"
-pyyaml = "^6.0.2"
-ruamel-yaml = "^0.18.6"
-mkdocstrings-python = "^1.12.2"
-mkdocs-include-markdown-plugin = "^7.1.2"
-mkdocs-jupyter = "^0.25.1"
+python = ">=3.9"
+ipykernel = "*"
+pyyaml = "*"
+ruamel-yaml = "*"
+mkdocs-material = "*"
+mkdocs-jupyter = "*"
+mkdocs-include-markdown-plugin = "*"
+mkdocstrings-python = "*"
 
 [build-system]
 requires = ["poetry-core"]
