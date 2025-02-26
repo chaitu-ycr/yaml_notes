@@ -7,13 +7,15 @@ readme = "README.md"
 requires-python = ">=3.9"
 authors = [{ name = "chaitu-ycr", email = "chaitu.ycr@gmail.com" }]
 keywords = ["yaml", "yml", "notes"]
-package-mode = false
 dynamic = [ "dependencies" ]
 
 [project.urls]
 homepage = "https://github.com/chaitu-ycr/yaml_notes.git"
 repository = "https://github.com/chaitu-ycr/yaml_notes.git"
 documentation = "https://chaitu-ycr.github.io/yaml_notes/"
+
+[tool.poetry]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = ">=3.9"
